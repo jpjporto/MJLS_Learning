@@ -15,8 +15,11 @@ The main_small.cpp is optimized (for speed) for the small scale example in the s
 ### Requirements ###
 
 We have the following code dependencies:
+
 -Eigen 3.3 (or greater);
+
 -MATLAB mat and mx libraries (we use MATLAB to generate the system matrices and to return the expected costs);
+
 -C++11 (or greater).
 
 The code was tested both on Windows (using MSVC17) and Linux (using g++ version 7.4).
