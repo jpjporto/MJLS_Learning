@@ -196,7 +196,7 @@ void sim_trajectory(Matrix<double, k, d> *K_in, const int n)
 
         // Simulate one trajectory
         Matrix<double, d, 1> x0((Matrix<double, d, 1>() << xRand(mt), xRand(mt), xRand(mt)).finished()); //Sample initial conditions
-        x_temp->col(0) = x0;
+        x_temp.col(0) = x0;
 
         theta_temp(0) = thetaRand(mt);
 
