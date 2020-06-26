@@ -35,8 +35,6 @@ Matrix<double, d, k> B1((Matrix<double, d, k>() << 1, 0, 1).finished());
 
 Matrix<double, m, m> prob((Matrix<double, m, m>() << 0.7, 0.3, 0.4, 0.6).finished());
 
-Matrix<double, k, d> K0, K1;
-
 Matrix<double, d, d> Q0(MatrixXd::Identity(d, d));
 Matrix<double, d, d> Q1(2 * MatrixXd::Identity(d, d));
 Matrix<double, k, k> R0(MatrixXd::Identity(k, k));
