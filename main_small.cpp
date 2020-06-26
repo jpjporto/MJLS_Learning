@@ -231,10 +231,6 @@ void compute_grad(Matrix<double, k, d> *K_in, const int n)
     Matrix<double, k, m*d> gradf;
     Matrix<double, k, m*d> grad_log_it;
 
-    Matrix<double, d, T + 1> *x_temp;
-    Matrix<double, k, T> *u_temp;
-    Matrix<int, 1, T + 1> *theta_temp;
-
     int init_n = n * (N / num_threads);
     int final_n = (n + 1)*(N / num_threads);
 
