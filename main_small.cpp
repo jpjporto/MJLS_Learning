@@ -247,8 +247,8 @@ void compute_grad(Matrix<double, k, d> *K_in, const int n)
     for (int i = init_n; i < final_n; ++i) {
         Matrix<double, 1, T> &C_it = c_t[i];
         Matrix<double, d, T + 1> &x_temp = x_t[i];
-        Matrix<double, d, T + 1> &u_temp = u_t[i];
-        Matrix<double, d, T + 1> &theta_temp = theta[i];
+        Matrix<double, k, T> &u_temp = u_t[i];
+        Matrix<int, 1, T> &theta_temp = theta[i];
 
         grad_log_i.setZero();
         Sigma_i[0].setZero();
@@ -256,7 +256,7 @@ void compute_grad(Matrix<double, k, d> *K_in, const int n)
 
         for (int t = 0; t < T; ++t) {
             gradf.setZero();
-            gradf.segment<d>(d*(*theta_temp)(t)) = -x_temp.col(t).transpose();
+            gradf.segment<d>(d * theta_temp(t)) = -x_temp.col(t).transpose();
 
             grad_log_it = pow(gamm, t) * r_sq_inv*(K_in[theta_temp(t)] * x_temp.col(t) + u_temp.col(t))*gradf;
 
