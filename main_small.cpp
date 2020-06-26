@@ -208,7 +208,7 @@ void sim_trajectory(Matrix<double, k, d> *K_in, const int n)
             c_temp.col(t) = x_temp.col(t).transpose() * Q[theta_temp(t)] * x_temp.col(t) + u_temp.col(t).transpose() * R[theta_temp(t)] * u_temp.col(t);
 
             // Compute next state
-            x_temp.col(t + 1) = A[theta_temp(t)] * x_temp->col(t) + B[theta_temp(t)] * u_temp->col(t);
+            x_temp.col(t + 1) = A[theta_temp(t)] * x_temp.col(t) + B[theta_temp(t)] * u_temp.col(t);
 
             double rand_num = unifRand(mt);
             if (rand_num <= prob.row(theta_temp(t))(0)) {
