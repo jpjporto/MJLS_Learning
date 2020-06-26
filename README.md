@@ -3,7 +3,7 @@
 This repository contains sample code to run the experiments in the following papers:
 
 - Convergence Guarantees of Policy Optimization Methods for Markovian Jump Linear Systems (accepted to ACC 2020, arXiv:2002.04090);
-- Policy Learning of MDPs with Mixed Continuous/Discrete Variables: A Case Study on  Model-Free Control of Markovian Jump Systems (accepted to L4DC 2020),
+- Policy Learning of MDPs with Mixed Continuous/Discrete Variables: A Case Study on  Model-Free Control of Markovian Jump Systems (accepted to L4DC 2020, arXiv:2006.03116),
 
 both authored by Joao Paulo Jansch-Porto, Bin Hu, and Geir Dullerud.
 
